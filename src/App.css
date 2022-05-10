@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fffafa;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App .head {
+  text-align: center;
+}

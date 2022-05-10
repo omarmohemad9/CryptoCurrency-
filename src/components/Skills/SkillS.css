@@ -1,0 +1,77 @@
+.SkillSection {
+  padding: 50px 0;
+}
+.SkillSection .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  background: transparent;
+}
+@media (max-width: 992px) {
+  .SkillSection .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.SkillSection .LeftS {
+  flex-basis: 41%;
+}
+
+@media (max-width: 769px) {
+  .SkillSection .LeftS {
+    width: 100%;
+  }
+}
+
+.SkillSection .LeftS img {
+  width: 100%;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  box-shadow: 3px 3px 5px #2f2f2f6e;
+}
+
+.SkillSection .RightS {
+  flex-basis: 55%;
+  padding: 0 0 50px 0;
+}
+
+@media (max-width: 769px) {
+  .SkillSection .RightS {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.SkillSection .RightS h1 {
+  margin-bottom: 20px;
+}
+.SkillSection .RightS p {
+  color: gray;
+}
+.SkillSection .RightS .Boxs-Skills {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.SkillSection .RightS .Boxs-Skills div {
+  flex-basis: 24%;
+  min-height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px;
+
+  text-align: center;
+}
+.SkillSection .RightS .Boxs-Skills div h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}

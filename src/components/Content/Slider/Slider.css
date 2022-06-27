@@ -1,0 +1,131 @@
+.slider {
+  margin-top: 35px;
+
+  padding: 10px 0;
+
+  /* width: ; */
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.slider .slider-in {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 20px;
+  user-select: none;
+  left: 10px;
+  transition: 0.1s ease;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -ms-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+  margin-left: 10px;
+}
+.slider .slider-in .box-slide {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: all;
+  user-select: none;
+  box-shadow: 0px 0px 8px #0000000d;
+  padding: 7px 10px;
+  text-decoration: none;
+  -webkit-user-drag: none;
+}
+
+.slider .slider-in .box-slide .topSide {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7px;
+}
+.slider .slider-in .box-slide .topSide span {
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  background-color: var(--base-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .slider-in .box-slide .topSide img {
+  width: 23px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.slider .slider-in .box-slide .bottomSlide {
+  display: flex;
+  align-items: end;
+  gap: 7px;
+}
+
+.slider .slider-in .box-slide p {
+  margin-top: 10px;
+}
+
+.BtnsSlid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .BtnsSlid {
+    display: none;
+  }
+}
+.BtnsSlid button {
+  border: 0;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.failed {
+  margin-top: 20px;
+}
+.failed div {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.failed div span {
+  width: 10px;
+  height: 11px;
+  padding: 13px 13px;
+  border-radius: 50px;
+  background-color: red;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  margin: 0 10px;
+  display: inline-block;
+  animation-name: failed;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes failed {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: #ff00008f;
+  }
+}

@@ -4,22 +4,18 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-html {
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #fffafa;
-}
-
+/* html {
+  overflow: hidden;
+} */
 .container {
-  margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 20px;
+}
+#root {
+  overflow: hidden;
 }
 
-.App {
-  text-align: center;
-}
-
-.App .head {
-  text-align: center;
-}
+/* @media(min-width:767px) {
+  .container{
+    width:
+  }
+} */

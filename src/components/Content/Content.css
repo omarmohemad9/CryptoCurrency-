@@ -1,0 +1,30 @@
+.content {
+  padding: 50px 0 20px;
+}
+.content .container .onePh {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .container .onePh .left {
+  flex-basis: 60%;
+}
+@media (max-width: 992px) {
+  .content .container .onePh .left {
+    flex-basis: 100%;
+  }
+}
+.content .container .onePh .left h1 {
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.content .container .onePh .right button {
+  border: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.192);
+  background-color: transparent;
+  padding: 7px 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}

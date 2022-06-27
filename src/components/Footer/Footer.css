@@ -1,122 +1,18 @@
-.Footer {
-  background-color: #f9f3f5;
-  margin: 10px 50px;
-  position: relative;
-}
-.Footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-@media (max-width: 992px) {
-  .Footer {
-    margin: 0;
-  }
-  .Footer .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 30px;
-  }
-}
-.Footer .Left {
-  flex-basis: 45%;
-  padding: 30px 0;
-}
-.Footer .Left .xdes {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-.Footer .Left .scx2 {
-}
-
-.Footer .Left .Bottom_Section {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-.Footer .Left .Bottom_Section div {
+.footer {
+  margin-top: 50px;
   text-align: center;
-}
-.Footer .Left .Bottom_Section div img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-.Footer .Right {
-  flex-basis: 50%;
-  background-color: #fffafa;
-  box-shadow: 0 0 20px #00000031;
-  padding: 20px 15px;
-  position: absolute;
-  right: 30px;
-  top: -45px;
-}
-@media (max-width: 992px) {
-  .Footer .Right {
-    position: initial;
-    width: 100%;
-    margin: 0;
-  }
-}
-.Footer .Right h2 {
-  text-align: center;
-}
-.Footer .Right form input {
-  display: block;
-  margin: 10px 0;
+  color: #5367fe;
+  text-transform: capitalize;
+  box-shadow: 69px 0px 51px #5367fe24;
   padding: 10px;
-  border: 0;
-  box-shadow: 0 0 20px #00000007;
 }
-@media (max-width: 992px) {
-  .Footer .Right form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-.Footer .Right form input::placeholder {
-  color: rgba(128, 128, 128, 0.435);
-}
-
-.Footer .Right form input:focus {
-  outline: 1px solid #ff4c60;
-}
-.Footer .Right form input.full {
-  width: 400px;
-}
-@media (max-width: 776px) {
-  .Footer .Right form input.full {
-    width: 100%;
-  }
-}
-.Footer .Right form .topInput {
+.footer .container {
   display: flex;
-  gap: 25px;
-  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
-@media (max-width: 992px) {
-  .Footer .Right form .topInput {
-    width: 400px;
-  }
-}
-
-@media (max-width: 776px) {
-  .Footer .Right form .topInput {
-    width: 100%;
-  }
-  .Footer .Right form .topInput input {
-    width: 100%;
-  }
-}
-
-.Footer .Right form textarea {
-  border: 0;
-  padding: 7px 10px;
-}
-.Footer .Right form textarea::placeholder {
-  color: rgba(128, 128, 128, 0.435);
-}
-.Footer .Right form textarea:focus {
-  outline: 1px solid #ff4c60;
+.footer .container span {
+  color: black;
+  font-weight: bold;
 }

@@ -1,29 +1,27 @@
-import React, { Fragment } from "react";
-import "./App.css";
-import Head from "./components/head/Head.js";
-import Img from "./components/imgHead/Img";
-import NewSletter from "./components/Newsletter/NewSletter";
-import SkillS from "./components/Skills/SkillS";
-import ServiceIn from "./components/Service/ServiceIn";
-import BoxSkills from "./components/boxsSkills/BoxSkills";
-import Company from "./components/Company/Company";
+import React, { Fragment, useState, useEffect } from "react";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav/Nav.js";
+
 import Home from "./components/Home/Home";
-import Social from "./components/social/Social";
-import PF from "./components/portfolio/PF";
+import Element from "./components/Element/Element";
+
+import "./App.css";
 import Footer from "./components/Footer/Footer";
+
 function App() {
+  document.title = "Crypto Market";
+
   return (
     <Fragment>
-      <Head />
-      <Img />
-      <NewSletter />
-      <SkillS />
-      <ServiceIn />
-      <BoxSkills />
-      <Company />
-      <Home />
-      <Social />
-      <PF />
+      <Router>
+        <Nav />
+
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/:id" element={<Element />} />
+        </Routes>
+      </Router>
       <Footer />
     </Fragment>
   );

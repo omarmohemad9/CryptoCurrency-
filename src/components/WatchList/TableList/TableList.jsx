@@ -2,10 +2,10 @@ import React, { useState, useEffect, Fragment } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import { KnowContext } from "../../Home/Home.jsx";
 import "./TableList.css";
+let count = 0;
 const TableList = ({ date, failed, searchRef, des }) => {
   let [elementSet, setElement] = useState();
 
-  let [count, setCount] = useState(0);
   let countArr = [0, 20, 40, 60, 80];
   let dateC = date.slice(countArr[count], (count + 1) * 20);
 
@@ -15,14 +15,15 @@ const TableList = ({ date, failed, searchRef, des }) => {
     });
     ele.target.classList.add("active");
   };
+
   let upAndAdd = () => {
     let btn = document.querySelectorAll(".CltOfBtn button");
     btn.forEach((e) => {
       e.classList.remove("active");
     });
     btn[count].classList.add("active");
-    console.log(count);
   };
+
   return (
     <Fragment>
       <table width="100%">
@@ -97,13 +98,14 @@ const TableList = ({ date, failed, searchRef, des }) => {
           className="decrease"
           onClick={() => {
             if (count < 1) {
-              setCount(4);
+              count = 4;
             } else if (count > 4) {
-              setCount(0);
+              count = 0;
             } else {
-              setCount((e) => e - 1);
+              count--;
             }
             upAndAdd();
+            console.log(count);
           }}
         >
           {" "}
@@ -117,8 +119,10 @@ const TableList = ({ date, failed, searchRef, des }) => {
                 data-num={i}
                 onClick={(el) => {
                   DLTandAdd(el);
-                  setCount(+el.target.dataset.num);
+                  count = +el.target.dataset.num;
                   // upAndAdd();
+                  upAndAdd();
+                  console.log(count);
                 }}
                 key={i}
               >
@@ -132,11 +136,11 @@ const TableList = ({ date, failed, searchRef, des }) => {
           className="btInc"
           onClick={(e) => {
             if (count < 0) {
-              setCount(4);
+              count = 4;
             } else if (count > 3) {
-              setCount(0);
+              count = 0;
             } else {
-              setCount((e) => e + 1);
+              count += 1;
             }
 
             upAndAdd();
